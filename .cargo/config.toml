@@ -1,0 +1,9 @@
+[target.wasm32-wasi]
+linker = "rust-lld"
+rustflags = ["-C", "target-feature=+bulk-memory"]
+
+[target.wasm32-wasi-preview1-threads]
+linker = "rust-lld"
+rustflags = [
+    "-Clink-args=--max-memory=67108864", # TODO(eloparco): Profile to tune maximum memory
+]

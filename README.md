@@ -15,6 +15,11 @@ Running the release target shows the expected output
 wasmtime --wasm threads --wasi threads target/wasm32-wasi-preview1-threads/release/wasi_channel.wasm
 ```
 
+Or running it natively
+```
+cargo run
+```
+
 Output 
 
 ```
@@ -23,7 +28,6 @@ receiving
         sent
 received [1, 2, 3]
 ```
-
 
 ### Reproducing
 
